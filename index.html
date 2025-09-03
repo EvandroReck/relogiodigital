@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Relógio Futurista</title>
+  <meta name="description" content="Relógio digital futurista com neon, vidro fosco e animações." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Sora para títulos e JetBrains Mono para dígitos -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Fundo com camadas animadas -->
+  <div class="bg-layer stars"></div>
+  <div class="bg-layer grid"></div>
+  <div class="bg-layer glow"></div>
 
+  <main class="shell">
+    <header class="topbar">
+      <h1 class="brand">
+        <span class="brand-core">NEON</span><span class="brand-glow">TIME</span>
+      </h1>
+
+      <div class="controls">
+        <button id="formatToggle" class="btn" aria-pressed="false" title="Alternar formato 12/24h">
+          <span class="btn-dot"></span>
+          <span class="btn-text"><strong>24H</strong></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="clock-card" aria-label="Relógio digital">
+      <div class="time">
+        <span id="hh" class="digit">00</span>
+        <span class="sep">:</span>
+        <span id="mm" class="digit">00</span>
+        <span class="sep">:</span>
+        <span id="ss" class="digit">00</span>
+        <span id="ampm" class="ampm" aria-hidden="true"></span>
+      </div>
+
+      <div class="info">
+        <div class="date" id="date">terça, 03 setembro 2025</div>
+        <div class="tz">
+          <span class="chip" id="tzName">America/Sao_Paulo</span>
+          <span class="chip" id="utcOffset">UTC−03:00</span>
+        </div>
+      </div>
+
+      <div class="ornaments">
+        <div class="ring ring-a"></div>
+        <div class="ring ring-b"></div>
+        <div class="ring ring-c"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Feito com <span class="heart">◆</span> para você — <a href="#" id="nowLink">agora</a></p>
+    </footer>
+  </main>
+
+  <script defer src="script.js"></script>
+</body>
+</html>
